@@ -36,46 +36,59 @@ const FlashCard = ({ productItems, addToCart }) => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
   }
 
   return (
     <>
       <Slider {...settings}>
-        {productItems.map((productItems) => {
-          return (
-            <div className='box'>
-              <div className='product mtop'>
-                <div className='img'>
-                  <span className='discount'>{productItems.discount}% Off</span>
-                  <img src={productItems.cover} alt='' />
-                  <div className='product-like'>
-                    <label>{count}</label> <br />
-                    <i className='fa-regular fa-heart' onClick={increment}></i>
-                  </div>
-                </div>
-                <div className='product-details'>
-                  <h3>{productItems.name}</h3>
-                  <div className='rate'>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                  </div>
-                  <div className='price'>
-                    <h4>${productItems.price}.00 </h4>
-                    {/* step : 3  
-                     if hami le button ma click garryo bahne 
-                    */}
-                    <button onClick={() => addToCart(productItems)}>
-                      <i className='fa fa-plus'></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )
-        })}
+        {
+          productItems.map((productItems,i)=>{
+            return(
+              <div  className="flex flex-col md:flex-row md:flex-wrap gap-4" key={i}>
+  <div className="relative bg-white p-5 rounded-lg shadow-md m-2 sm:m-4">
+    <div className="relative" key={i}>
+      
+      <img src={productItems.cover} alt="" className="w-full h-auto object-cover rounded-lg" />
+     
+    </div>
+    <div className="mt-10">
+      <h3 className="text-base font-normal">{productItems.name}</h3>
+      <div className="flex text-yellow-500 mt-1">
+        <i className="fa fa-star text-sm mr-1"></i>
+        <i className="fa fa-star text-sm mr-1"></i>
+        <i className="fa fa-star text-sm mr-1"></i>
+        <i className="fa fa-star text-sm mr-1"></i>
+        <i className="fa fa-star text-sm mr-1"></i>
+      </div>
+      <div className="flex justify-between items-center text-red-600 mt-2">
+        <h4 className="text-lg">Ranges from Rs {productItems.price}.00 to 1000</h4>
+      </div>
+    </div>
+  </div>
+</div>
+            )
+          })
+        }
       </Slider>
     </>
   )

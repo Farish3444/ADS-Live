@@ -6,7 +6,7 @@ const Search = ({ CartItem }) => {
 
   return (
     <>
-      <section className="bg-white p-2 shadow-md">
+      <section className="bg-white p-2 shadow-md mb-2 sm:mb-0">
   <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
     
     {/* Logo */}
