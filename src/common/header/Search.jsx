@@ -1,8 +1,16 @@
-import React from "react"
+import React,{useEffect} from "react"
 import adslogo from '../../components/assets/images/ADS_logo.jpg';
+import { useHistory,useLocation } from "react-router-dom";
 
 const Search = ({ CartItem }) => {
   
+  const navigate = useHistory();
+
+  const location = useLocation();
+
+  useEffect(()=>{
+    
+  },[location])
 
   return (
     <>
@@ -30,8 +38,12 @@ const Search = ({ CartItem }) => {
 
     {/* Icons */}
     <div className="flex items-center space-x-4">
-    <button class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-    Try out Comfort Pants
+    <button class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
+    onClick={()=>{
+      location.pathname === "/comfortpants" ?  navigate.push('/') : navigate.push('/comfortpants')
+    }}
+    >
+    {location.pathname === "/comfortpants" ? "Back to designs" : "Try out Comfort Pants"}
 </button>
     {/*<div className="relative">
         <Link to="/cart">

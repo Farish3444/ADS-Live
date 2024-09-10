@@ -6,7 +6,8 @@ import Pages from "./pages/Pages"
 import Data from "./components/Data"
 import Cart from "./common/Cart/Cart"
 import Footer from "./common/footer/Footer"
-import Sdata from "./components/shops/Sdata"
+import Sdata from "./components/shops/Sdata";
+import Pantspage from "./components/comfortpants/Pantspage"
 
 function App() {
   /*
@@ -78,8 +79,11 @@ function App() {
           <Route path='/cart' exact>
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
+          <Route path="/comfortpants">
+            <Pantspage />
+          </Route>
         </Switch>
-        {/*<Footer />*/}
+        <Footer />
       </Router>
     </>
   )
