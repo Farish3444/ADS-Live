@@ -6,29 +6,85 @@ const productlist = [
         id:1,
         title:'Blue Frock',
         description:'Kids collection age upto 5-15',
-        image:'./images/SlideCard/frock1.png',
+        image:'./images/pant1.jpg',
         price:'1000'
     },
     {
         id:2,
         title:'Black Frock',
         description:'Kids collection age upto 5-15',
-        image:'./images/SlideCard/frock2.png',
+        image:'./images/pant2.jpg',
         price:'1499'
     },{
         id:3,
         title:'Cream Frock',
         description:'Kids collection age upto 5-15',
-        image:'./images/SlideCard/frock3.png',
+        image:'./images/pant3.jpg',
         price:'1299'
     },
     {
         id:4,
         title:'Mini Skirt',
         description:'Kids collection age upto 5-15',
-        image:'./images/SlideCard/frock4.png',
+        image:'./images/pant4.jpg',
         price:'1399'
-    }
+    },
+    ,
+    {
+        id:5,
+        title:'Mini Skirt',
+        description:'Kids collection age upto 5-15',
+        image:'./images/pant5.jpg',
+        price:'1399'
+    },
+    ,
+    {
+        id:6,
+        title:'Mini Skirt',
+        description:'Kids collection age upto 5-15',
+        image:'./images/pant6.jpg',
+        price:'1399'
+    },
+    ,
+    {
+        id:7,
+        title:'Mini Skirt',
+        description:'Kids collection age upto 5-15',
+        image:'./images/pant7.jpg',
+        price:'1399'
+    },
+    ,
+    {
+        id:8,
+        title:'Mini Skirt',
+        description:'Kids collection age upto 5-15',
+        image:'./images/pant8.jpg',
+        price:'1399'
+    },
+    ,
+    {
+        id:9,
+        title:'Mini Skirt',
+        description:'Kids collection age upto 5-15',
+        image:'./images/pant9.jpg',
+        price:'1399'
+    },
+    ,
+    {
+        id:10,
+        title:'Mini Skirt',
+        description:'Kids collection age upto 5-15',
+        image:'./images/pant10.jpg',
+        price:'1399'
+    },
+    ,
+    {
+        id:11,
+        title:'Mini Skirt',
+        description:'Kids collection age upto 5-15',
+        image:'./images/pant11.jpg',
+        price:'1399'
+    },
 ]
 
 

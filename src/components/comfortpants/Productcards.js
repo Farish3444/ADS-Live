@@ -10,7 +10,7 @@ const Productcard=({id,title,description,image,price}) => {
   return (
     <>
 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <div className='relative'>
+    <div className='relative h-60'>
         <img className="rounded-t-lg w-full h-full object-cover mt-2" src={image} alt="" />    
     </div>
     <div className="p-5">

@@ -2,7 +2,7 @@ import React,{useEffect} from "react"
 import adslogo from '../../components/assets/images/ADS_logo.jpg';
 import { useHistory,useLocation } from "react-router-dom";
 
-const Search = ({ CartItem }) => {
+const Search = () => {
   
   const navigate = useHistory();
 
@@ -45,14 +45,7 @@ const Search = ({ CartItem }) => {
     >
     {location.pathname === "/comfortpants" ? "Back to designs" : "Try out Comfort Pants"}
 </button>
-    {/*<div className="relative">
-        <Link to="/cart">
-          <i className="fa fa-shopping-bag icon-circle text-lg"></i>
-          <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">
-            {CartItem.length === 0 ? "" : CartItem.length}
-          </span>
-        </Link>
-      </div>*/} 
+    
     </div>
   </div>
 </section>
