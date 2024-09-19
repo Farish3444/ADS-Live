@@ -5,12 +5,8 @@ import { useHistory,useLocation } from "react-router-dom";
 const Search = () => {
   
   const navigate = useHistory();
-
   const location = useLocation();
 
-  useEffect(()=>{
-    
-  },[location])
 
   return (
     <>
@@ -18,23 +14,26 @@ const Search = () => {
   <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
     
     {/* Logo */}
-    <div className="mb-2 md:mb-0">
-      <img src={adslogo} alt="Aleeza Design Studio Logo" className="w-24" />
-    </div>
+    <div className="flex flex-col sm:flex-row sm:mb-2 mb-4 items-center">
+    <img 
+      src={adslogo} 
+      alt="Aleeza Design Studio Logo" 
+      className="w-20 sm:w-24 mb-2 sm:mb-0" 
+    />
+    <h1 className="text-xl sm:text-2xl font-bold text-center sm:text-left"> 
+      <span className="text-red-500">
+        ALEEZA&nbsp;
+      </span> 
+      DESIGN&nbsp;
+      <span className="text-red-500">
+        STUDIO
+      </span>
+    </h1>
+  </div>
+  
 
     {/* Title */}
-    <div className="mb-2 md:mb-0 text-center md:text-center">
-      <h1 className="text-2xl font-bold font-serif"> 
-      <span className="text-red-500">
-      ALEEZA &nbsp;
-      </span> 
-      DESIGN  
-      &nbsp;
-      <span className="text-red-500">
-      STUDIO
-      </span>
-      </h1>
-    </div>
+   
 
     {/* Icons */}
     <div className="flex items-center space-x-4">
