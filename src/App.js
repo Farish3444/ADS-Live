@@ -1,13 +1,14 @@
-import React, { useState } from "react"
+import React, { useState,lazy,Suspense } from "react"
 import "./App.css"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Header from "./common/header/Header"
 import Pages from "./pages/Pages"
 import Data from "./components/Data"
-import Cart from "./common/Cart/Cart"
 import Footer from "./common/footer/Footer"
-import Sdata from "./components/shops/Sdata";
 import Pantspage from "./components/comfortpants/Pantspage"
+import toast, { Toaster } from 'react-hot-toast';
+// const AdminLogin = lazy(()=>import('./components/adsadmin/login'));
+import Login from "./components/adsadmin/login"
 
 function App() {
  
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <>
+    <Toaster />
       <Router>
         <Header  />
         <Switch>
@@ -23,6 +25,9 @@ function App() {
           </Route>
           <Route path="/comfortpants">
             <Pantspage />
+          </Route>
+          <Route path='/admin'>
+              <Login />
           </Route>
         </Switch>
         <Footer />

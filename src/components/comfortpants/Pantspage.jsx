@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
 import Productcard from './Productcards';
+import { CgAdd } from "react-icons/cg";
+import useGetreq from '../customhooks/useGetreq';
+import Config from '../../config/config.json';
+import Uploadmodal from '../comfortpants/component/uploadmodal';
 
 const productlist = [
     {
@@ -88,19 +92,48 @@ const productlist = [
 ]
 
 
+const admin = sessionStorage.getItem('isadmin') === 'true'
+
+
 const Pantspage = () => {
+
+    const url = `${Config.local_env}/comfortpants`;
+    const {data,loading,error} = useGetreq(url);
+
+
+    const [isAdmin, setIsAdmin] = useState(false);
+
+
+
     
+    useEffect(() => {
+        const adminStatus = sessionStorage.getItem('isadmin') === 'true';  
+        setIsAdmin(adminStatus);  
+      }, []);
+
+
     return (
     <>
     <div className="flex flex-wrap mx-0 my-8 mt-16">
-     {
-        productlist?.map((m,i)=>(
+    {
+        // productlist?
+        data && data.map((m,i)=>(
           <div key={i} className="w-full sm:w-1/2 md:w-1/4 px-4 mb-6">
             <Productcard id={m.id} title={m.title} description={m.description} image={m.image} price={m.price}  />
           </div>
         ))
     }  
+
+    {
+        isAdmin &&
+        <div className="fixed bottom-4 right-4 z-50">
+        <CgAdd className="text-red-500 text-8xl cursor-pointer" />
+        </div>
+    }
+
+    
     </div>   
+    <Uploadmodal />
     </>
   )
 }
