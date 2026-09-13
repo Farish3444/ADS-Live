@@ -65,10 +65,10 @@ const FlashCard = ({ productItems }) => {
           productItems.map((productItems,i)=>{
             return(
               <div  className="flex flex-col md:flex-row md:flex-wrap gap-4" key={i}>
-  <div className="relative bg-white p-5 rounded-lg shadow-md m-2 sm:m-4">
+  <div className="relative bg-white p-4 rounded-lg shadow-md m-2 sm:m-4">
     <div className="relative" key={i}>
       
-      <img src={productItems.cover} alt="" className="w-full h-auto object-cover rounded-lg" />
+      <img src={productItems.cover} alt="" className="w-full h-[400px] object-cover rounded-lg" />
      
     </div>
     <div className="mt-10">
