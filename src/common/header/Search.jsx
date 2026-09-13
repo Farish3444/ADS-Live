@@ -11,8 +11,8 @@ const Search = () => {
   return (
     <>
       <section className="bg-white p-2 shadow-md mb-2 sm:mb-0">
+        
   <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-    
     {/* Logo */}
     <div className="flex flex-col sm:flex-row sm:mb-2 mb-4 items-center">
     <img 

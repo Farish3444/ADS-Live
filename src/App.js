@@ -7,7 +7,6 @@ import Data from "./components/Data"
 import Footer from "./common/footer/Footer"
 import Pantspage from "./components/comfortpants/Pantspage"
 import toast, { Toaster } from 'react-hot-toast';
-// const AdminLogin = lazy(()=>import('./components/adsadmin/login'));
 import Login from "./components/adsadmin/login"
 
 function App() {
