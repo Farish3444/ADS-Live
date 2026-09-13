@@ -16,22 +16,29 @@ function App() {
   return (
     <>
     <Toaster />
-    {/* Heder changes */}
-      <Router>
-        <Header  />
-        <Switch>
-          <Route path='/' exact>
-            <Pages productItems={productItems}  />
-          </Route>
-          <Route path="/comfortpants">
-            <Pantspage />
-          </Route>
-          <Route path='/admin'>
-              <Login />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+     <Router>
+  <div className="min-h-screen flex flex-col">
+    <Header />
+
+    <main className="flex-1">
+      <Switch>
+        <Route path="/" exact>
+          <Pages productItems={productItems} />
+        </Route>
+
+        <Route path="/comfortpants">
+          <Pantspage />
+        </Route>
+
+        <Route path="/admin">
+          <Login />
+        </Route>
+      </Switch>
+    </main>
+
+    <Footer />
+  </div>
+</Router>
     </>
   )
 }
